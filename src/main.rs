@@ -17,7 +17,7 @@ fn main() {
     let (trim_duration, total_parts) = metadata.calculate(&(config.maxsize as f64));
 
     println!(
-        "[+] {} will be trimmed into {} parts of {}s",
+        "[+] {} will be trimmed into {} parts of {:.2}s",
         config.videopath, total_parts, trim_duration
     );
     match videosegmenter::trim(&config, trim_duration) {
